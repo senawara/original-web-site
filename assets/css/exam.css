@@ -1,0 +1,138 @@
+main{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#examination{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+main>h1{
+    font-size: 30px;
+}
+.sentences{
+    width: 90%;
+    text-align: left;
+}
+.sentences >h1{
+    font-size: 40px;
+}
+.sentences >h1>span{
+    font-size: 40px;
+    color: #8CB24C;
+}
+.questions{
+
+    /* 問題のスライドショー */
+    display:none;
+    width: 80%;
+    padding: 10px;
+    margin: 30px;
+    margin-top:50px ;
+    border: 3px solid #8CB24C;
+    border-radius: 40px;
+    
+}
+.questions>h1{
+    margin: 20px 5px;
+    margin-top: 25px;
+}
+.questions>h1>span{
+    font-size: 25px;
+}
+.options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px;
+}
+.option,#end-exam{
+    margin: 12px 0px;
+    font-family: 'MyCustomFont';
+    width: 80%;
+    height: 60px;
+    font-size: 23px;
+    border-radius: 25px;
+    color:#504E40;
+    border: 1px solid #504E40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.option:hover{
+    background-color: #8CB24C;
+    color: whitesmoke;
+}
+#end-exam:hover{
+    background-color: #c42331;
+    color: whitesmoke;
+}
+
+#q-6{
+    height: 480px;
+    text-align: center;
+}
+#q-6 > div{
+    margin: 100px 0px;
+}
+#q-6>div>h1{
+    font-size: 25px;
+}
+#q-6>div>p{
+    margin: 30px;
+}
+#end-exam{
+    margin: 30px auto;
+    background-color: white;
+}
+#nickname{
+    padding:0px 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #504E40;
+}
+.alert{
+    display: none;
+    margin: 8px;
+    color: #c42331;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+.scroll{
+    position: fixed;
+    bottom: 80px;
+    height: 15px;
+    width: 95%;
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+    border: 0.4px solid #504E40;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.scroll>div{
+    height: 10px;
+    border-radius: 10px;
+    margin-left: 2px;
+
+    /* progressbarの出力 */
+    width: 0%;
+
+
+    background-color: #8CB24C;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/main_style.css">
+    <link rel="stylesheet" href="./assets/css/exam.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerimaruLove</title>
+</head>
+<body id="exam-page">
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" id="header-title">
+                <img src="./assets/img/icon.png" alt="">
+                <img src="./assets/img/name1.png" alt="">
+            </a>
+  
+        <nav class="header__nav nav" id="js-nav">
+            <ul class="nav__items nav-items">
+                <li class="nav-items__item"><a href="index.html">Main</a></li>
+                <li class="nav-items__item"><a href="#features">Features</a></li>
+                <li class="nav-items__item"><a href="#anime">Anime</a></li>
+                <li class="nav-items__item"><a href="#event">Event</a></li>
+                <li class="nav-items__item"><a href="#goods">Goods</a></li>
+            </ul>
+        </nav>
+  
+          <button class="header__hamburger hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+       <main>
+        <section class="sentences">
+            <h1>ねり<span>丸</span>検定</h1>
+            <h2>〜みんなのねり丸への愛を確かめる検定〜</h2>
+        </section>
+
+        <section class="questions" id="q-1">
+            <h1><span>Q1</span>.ねり丸の語尾はどれ</h1>
+            <ul class="options">
+                <li class="option" id="ans-1-1">なり</li>
+                <li class="option" id="ans-1-2">まる</li>
+                <li class="option" id="ans-1-3">ねり</li>
+                <li class="option" id="ans-1-4">ごわす</li>
+            </ul>
+        </section>
+        
+        
+        <section class="questions" id="q-2">
+            <h1><span>Q2</span>.ねり丸が自称している職業は？</h1>
+            <ul class="options">
+                <li class="option" id="ans-2-1">大根農家</li>
+                <li class="option" id="ans-2-2">アニメーター</li>
+                <li class="option" id="ans-2-3">ヒーロー</li>
+                <li class="option" id="ans-2-4">王様</li>
+            </ul>
+        </section>
+
+        <section class="questions" id="q-3">
+            <h1><span>Q3</span>.ねり丸のモチーフは次のうちどれ</h1>
+            <ul class="options">
+                <li class="option" id="ans-3-1">馬</li>
+                <li class="option" id="ans-3-2">やぎ</li>
+                <li class="option" id="ans-3-3">大福</li>
+                <li class="option" id="ans-3-4">犬</li>
+            </ul>
+        </section>
+
+
+        <section class="questions" id="q-4">
+            <h1><span>Q4</span>.ねり丸の年齢は次のうちどれ</h1>
+            <ul class="options">
+                <li class="option" id="ans-4-1">赤ちゃん</li>
+                <li class="option" id="ans-4-2">小学校低学年くらい</li>
+                <li class="option" id="ans-4-3">中学生</li>
+                <li class="option" id="ans-4-4">79歳</li>
+            </ul>
+        </section>
+
+        <section class="questions" id="q-5">
+            <h1><span>Q5</span>.ねり丸が誕生した年月は</h1>
+            <ul class="options">
+                <li class="option" id="ans-5-1">1947年8月</li>
+                <li class="option" id="ans-5-2">2005年6月</li>
+                <li class="option" id="ans-5-3">2011年3月</li>
+                <li class="option" id="ans-5-4">2020年1月</li>
+            </ul>
+        </section>
+        
+        <section class="questions" id="q-6">
+            <div>
+                <h1>これにて検定は終了です</h1>
+                <br>
+                <p>
+                    あなたの得点をもとに<br>
+                    完全非公式ねり丸検定の級<br>
+                    が与えられます
+                </p>
+                <div>
+                    <input id="nickname"type="text" placeholder="ニックネームを入れてね">
+                    <p class="alert">ニックネームを入れよう</p>
+                </div>
+                <div>
+                    <div id="end-exam">試験結果を見る</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll"> 
+            <div id="progress"></div>
+        </section>
+       </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/exam.js"></script>
+    <script src="./assets/js/header.js"></script>
+</body>
+</html>

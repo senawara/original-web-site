@@ -1,0 +1,529 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src:url('../nikumaru.otf') format('truetype');
+}
+*{
+    text-decoration: none;
+    margin:0;
+    padding: 0px;
+}
+  /* ヘッダー */
+.header {
+    box-shadow: 0px 10px 10px #d4d4d4;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+#header-title{
+    display: flex;
+    align-items: center;
+}
+.header__inner {
+    padding: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    position: relative;
+}
+
+.header__title {
+    width: 80px;
+}
+
+
+
+.header__title img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header__nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: #fff;
+    transition: ease .4s;
+}
+
+
+
+
+.nav-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+.nav-items__item a {
+    color: #504E40;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.nav-items__item:last-child a {
+    margin-bottom: 0;
+}
+
+
+
+/* ハンバーガーメニュー */
+.header__hamburger {
+width: 48px;
+height: 100%;
+
+}
+
+.hamburger {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 9999;
+}
+
+
+
+.hamburger span {
+    width: 100%;
+    height: 1px;
+    border: 1px;
+    border-radius: px;
+    background-color: #504E40;
+    position: relative;
+    transition: ease .4s;
+    display: block;
+}
+
+.hamburger span:nth-child(1) {
+top: 0;
+}
+
+.hamburger span:nth-child(2) {
+margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+top: 0;
+}
+
+
+/* ハンバーガーメニュークリック後のスタイル */
+.header__nav.active {
+transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+top: 5px;
+transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+top: -13px;
+transform: rotate(-45deg);
+} 
+
+
+
+
+
+
+body{
+    overflow-x: hidden;
+    font-family: 'MyCustomFont',sans-serif;
+    font-size: 18px;
+    color: #504E40;
+    position: relative;
+    top: 100px;
+}
+
+#title{
+    width: 100%;
+    height: 730px;
+    background-image: url("../img/bgi.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#title>img{
+    margin: 90px 0px 60px 0px;
+}
+#title .btn-div{
+    margin: 20px 0px;
+}
+
+
+#about{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about > h1{
+    text-align: center;
+    width: 80%;
+}
+
+#about > h2 >span{
+    font-size: 35px;
+    color: #8CB24C;
+}
+section{
+    margin-bottom: 40px 15px;
+}
+
+
+.subtitle{
+    text-align: center;
+    margin: 10px;
+    margin-top: 40px;
+}
+.subtitle >h1{
+    font-size: 30px;
+}
+.btn-div{
+    background-color: whitesmoke;
+    width: 350px;
+    height: 74px;
+    border-radius: 20px;
+    border: 1.5px solid #504E40;
+}
+.btn{
+    position: relative;
+    top: -5px;
+    right: 3px;
+    font-family: 'MyCustomFont',sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: #8CB24C;
+    border: none;
+    width: 350px;
+    height: 74px;
+    border-radius: 20px;
+}
+#exam{
+    background-color: #c42331;
+}
+@media (min-width:900px){
+    .btns{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+
+
+#back-pop{
+    display: none;
+    z-index: 9;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8) ;
+}
+#popup{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60%;
+    background-color: #8CB24C;
+    z-index: 10;
+    top: 15%;
+    right: 5%;
+    border-radius: 40px;
+    text-align: center;
+}
+#popup-x{
+    width: 30px;
+    border-radius: 10px;
+}
+#popup>h1{
+    margin-top: 20px;
+    font-size: 25px;
+}
+#popup > h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    color: whitesmoke;
+    font-size: 30px;
+    top: 15px;
+    right: 25px;
+}
+#popup>p{
+    margin: 20px;
+
+}
+#exam2{
+    border: 1px solid #504E40;
+    font-family: 'MyCustomFont';
+    width: 350px;
+    height: 74px;
+    border-radius: 40px;
+    position:relative;
+    top: 10px;
+    color: #8CB24C;
+    background-color: whitesmoke;
+    font-size: 20px;
+}
+#exam2:hover{
+    background-color: #8CB24C;
+    color: whitesmoke;
+}
+
+#features{
+    margin: 100px 0px;
+}
+.features-liner{
+    box-shadow: 10px 10px 4px #b9b9b9;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    padding:40px 0px;
+    width: 400px;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px 0px;
+}
+.feature2{
+    width: 60%;
+}
+.feature2 p{
+    margin: 20px 10px;
+    font-size: 18px;
+    display: none;
+}
+.featureImg1{
+    height: 400px;
+    margin-top: 30px 0px;
+}
+.featureImg2{
+    height: 400px;
+    margin-top: 30px;
+}
+.left-side{
+    text-align: left;
+}
+.right-side{
+    text-align: right;
+}
+.right-side>span>span{
+    color: #c42331;
+}
+.features-liner{
+    margin: 20px auto;
+    width: 380px;
+}
+@media (min-width:600px){
+    .features-liner{
+        width: 550px;
+    }
+}
+
+.voting{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.voting > P{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.anime-list
+{
+    overflow-x: auto;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0px 100px;
+}
+.anime-list>li{
+    display: inline-block;
+    width: 250px;
+    margin: 30px;
+}
+.anime-list>li>p{
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+.anime-nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+.anime-nav > ul > li{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #504E40;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anime-nav > ul > li:hover{
+    background-color: #8CB24C;
+    color: whitesmoke;
+}
+
+
+#event{
+    margin: 100px 0px;
+}
+.tags{
+    margin: 30px 0px;
+}
+.border-tags{
+    border: 0.1px solid #504E40;
+    background-color: #8CB24C;
+    overflow: hidden;
+}
+.tag{
+    background-color: white;
+    width:100%;
+    display: flex;
+    border: 0.5px solid #504E40;
+    align-items: center;
+    overflow:hidden;
+}
+.tag>img{
+    height: 86px;
+    position: absolute;
+    right: 30px;
+}
+.tag-contents{
+    margin: 20px;
+
+}
+.tag-contents > p{
+    font-size: 13px;
+    margin: 10px;
+}
+.tag-contents >h1{
+    font-size: 20px;
+}
+
+
+
+#goods{
+    width: 90%;
+    margin: 150px auto;
+}
+.main-goods{
+    margin: auto;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.main-goods>a>div:hover{
+    background-color: rgba(160, 160, 160, 0.3);
+    border-radius: 5px;
+    color: rgb(156, 156, 156);
+}
+.main-goods > img{
+    width: 300px;
+}
+.main-goods >a> div{
+    padding: 20px;
+    color: #504E40;
+}
+.main-goods >a> div > h1{
+    font-size: 23px;
+}
+.main-goods >a> div > p{
+    margin: 10px;
+    font-size: 15px;
+}
+
+.sub-goods{
+    display: flex;
+    flex-direction: row;
+}
+.sub-goods > div{
+    margin-left: 20px;
+    padding: 20px;
+}
+.sub-goods > div >h1{
+    font-size: 23px;
+}
+.sub-goods > div > p{
+    font-size: 15px;
+    margin: 10px;
+}
+.sub-goods > img{
+    border-radius: 20px;
+}
+.sub-goods>div:hover{
+    background-color: rgba(160, 160, 160, 0.3);
+    border-radius: 5px;
+    color: rgb(156, 156, 156);
+}
+
+
+
+footer{
+    text-align: center;
+    background-color: #8CB24C;
+    width: 100%;
+    height: 350px;
+    color: white;
+    position: absolute;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.icons{
+    display:flex;
+    justify-content: space-around;
+}
+.information{
+    margin: 80px;
+}
+.information>li{
+    margin: 10px;
+    
+}
+.copy-right{
+    font-size: smaller;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
