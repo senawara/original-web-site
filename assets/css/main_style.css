@@ -7,6 +7,9 @@
     margin:0;
     padding: 0px;
 }
+body{
+    overflow-x: hidden;
+}
   /* ヘッダー */
 .header {
     box-shadow: 0px 10px 10px #d4d4d4;
@@ -73,6 +76,10 @@
     text-align: center;
     font-size: 30px;
     margin-bottom: 24px;
+}
+.nav-items__item span{
+    font-size: 13px;
+    margin: 10px;
 }
 
 .nav-items__item:last-child a {
@@ -193,11 +200,10 @@ section{
 
 .subtitle{
     text-align: center;
-    margin: 10px;
     margin-top: 40px;
 }
 .subtitle >h1{
-    font-size: 30px;
+    font-size: 2rem;
 }
 .btn-div{
     background-color: whitesmoke;
@@ -221,14 +227,6 @@ section{
 }
 #exam{
     background-color: #c42331;
-}
-@media (min-width:900px){
-    .btns{
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
 }
 
 
@@ -296,7 +294,7 @@ section{
 }
 
 #features{
-    margin: 100px 0px;
+    padding: 100px 0px;
 }
 .features-liner{
     box-shadow: 10px 10px 4px #b9b9b9;
@@ -346,11 +344,6 @@ section{
 .features-liner{
     margin: 20px auto;
     width: 380px;
-}
-@media (min-width:600px){
-    .features-liner{
-        width: 550px;
-    }
 }
 
 .voting{
@@ -407,7 +400,8 @@ section{
 
 
 #event{
-    margin: 100px 0px;
+    margin-top: 100px;
+    padding-bottom: 100px;
 }
 .tags{
     margin: 30px 0px;
@@ -415,7 +409,6 @@ section{
 .border-tags{
     border: 0.1px solid #504E40;
     background-color: #8CB24C;
-    overflow: hidden;
 }
 .tag{
     background-color: white;
@@ -424,6 +417,7 @@ section{
     border: 0.5px solid #504E40;
     align-items: center;
     overflow:hidden;
+    position:relative;
 }
 .tag>img{
     height: 86px;

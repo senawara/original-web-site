@@ -40,9 +40,12 @@ let count=0;
 // Featuresのアニメーション
 window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
-    if (scrollY >= 1050 && count==0 && scrollY<=1100) {
+    let offset = $("#features").offset().top;
+    if (scrollY >= offset && count==0 && scrollY<=1100) {
         console.log(scrollY);
-        window.scrollTo(0,1050);
+        window.scrollTo(0,offset);
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.overflow = "hidden";
         count+=1;
         featureAnime();
@@ -56,7 +59,9 @@ window.addEventListener("scroll", () => {
             });
         },2800)
         setTimeout(function(){
-            document.body.style.overflow = "visible";},4000);
+            document.body.style.overflow = "visible";
+            document.body.style.paddingRight = "0px";
+        },4000);
     }
 });
 
