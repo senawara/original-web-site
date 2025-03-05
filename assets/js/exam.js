@@ -2,11 +2,15 @@ import { db } from "../../firebase-config.js";
 import { collection, addDoc, getDocs, serverTimestamp, orderBy, query } 
 from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
+
+
+
 // exam.htmlとのみ接続
 let pages =1;
 let score =0;
 let nickname="";
 let progress= 0;
+
 $(function(){
     $("#q-1").show();
 })
@@ -45,9 +49,11 @@ $("#end-exam").on("click",function(){
     }
 })
 
+
 function justPreview(){
-    if(nickname){
-        window.location.href=`/original-web-site/member.html?nickname=${encodeURIComponent(nickname)}&score=${score}`;
+    if(nickname!=""){
+        // リダイレクト
+        window.location.href = `member.html?nickname=${encodeURIComponent(nickname)}&score=${encodeURIComponent(score)}`;
     }else{
         $(".alert").show();
     }
@@ -70,7 +76,8 @@ async function sendData() {
         });
         console.log("データを送信しました！");
         inputElement.value = "";
-        window.location.href=`/original-web-site/member.html?nickname=${encodeURIComponent(nickname)}&score=${encodeURIComponent(score)}`;
+        // リダイレクト
+        window.location.href = `member.html?nickname=${encodeURIComponent(nickname)}&score=${encodeURIComponent(score)}`    
     } catch (error) {
         console.error("データ送信エラー:", error);
     }

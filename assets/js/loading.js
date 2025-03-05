@@ -4,22 +4,20 @@ const loadingHTML = `
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./assets/img/bgi.png") ;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 9999;
     ">
         <div class="spinner" style="
-            border: 16px solid #f3f3f3;
-            border-top: 16px solid #3498db;
-            border-radius: 50%;
+            border-radius: 100px;
             width: 120px;
             height: 120px;
             animation: spin 2s linear infinite;
-        "></div>
+        "><img src="./assets/img/icon.png"></div>
     </div>
     <style>
         @keyframes spin {

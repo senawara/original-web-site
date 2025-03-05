@@ -24,16 +24,11 @@ $('#btn-en').on("click",function(){
 $('#popup-x').on("click",function(){
     $("#back-pop").hide();
     $("#btn-en",).css({
-        "top":"-5px",
-        "right":"3px",
         "background-color":"#8CB24C"
     });
 })
 $('#popup-x').hover(function(){
-        $(this).css("background-color","#6d8740")},
-    function(){
-        $(this).css("background-color","transparent")
-    }
+        $(this).css("background-color","#8CB24C")},
 )
 
 let count=0;
@@ -42,14 +37,15 @@ window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
     let offset = $("#features").offset().top;
     if (scrollY >= offset && count==0 && scrollY<=1300) {
-        console.log(scrollY);
         window.scrollTo(0,offset);
+        document.documentElement.style.overflow = "hidden";
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        document.body.style.paddingRight = `${scrollbarWidth}px`;
-        document.body.style.overflow = "hidden";
         count+=1;
         featureAnime();
         setTimeout(function(){
+            $("#featureImg1").css({
+                
+            })
             $(".feature2 p").slideDown(1000);
         },1800)
         setTimeout(function(){
@@ -59,9 +55,8 @@ window.addEventListener("scroll", () => {
             });
         },2800)
         setTimeout(function(){
-            document.body.style.overflow = "visible";
-            document.body.style.paddingRight = "0px";
-        },4000);
+            document.documentElement.style.overflow = "visible";
+        },3000);
     }
 });
 
@@ -119,7 +114,6 @@ $("#ani4").on("click",function(){
 //イベントのアニメーション
 window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
-    console.log(scrollY)
     if (scrollY >= 3000 && scrollY<=3150) {
        tagAnime(1);
        setTimeout(function(){tagAnime(2)},100);
@@ -148,11 +142,12 @@ function swipeAnime(id,url){
     swipeElement.addEventListener("touchmove", function(event) {
         currentX = event.touches[0].clientX;
         let deltaX = currentX - startX;
-
-        $(`#${id}`).css({
-            "transform": `translateX(${deltaX}px)`,
-            "transition": "transform 0.1s ease"
-        })
+        if(deltaX<0){
+            $(`#${id}`).css({
+                "transform": `translateX(${deltaX}px)`,
+                "transition": "transform 0.1s ease"
+            })
+        }
 
     });
 

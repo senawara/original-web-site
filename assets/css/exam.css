@@ -1,14 +1,14 @@
 main{
-    position: absolute;
-    top: 50px;
-    width: 100%;
+    overflow: hidden;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    box-sizing: border-box;
 }
+
 #examination{
-    overflow: hidden;
     margin: 0;
     padding: 0;
 
@@ -31,10 +31,9 @@ main>h1{
 
     /* 問題のスライドショー */
     display:none;
-    width: 80%;
+    width: 75%;
     padding: 10px;
-    margin: 30px;
-    margin-top:50px ;
+    margin-top:10px ;
     border: 3px solid #8CB24C;
     border-radius: 40px;
     
@@ -43,24 +42,23 @@ main>h1{
 @media (min-width:800px) {
     .questions{
         width: 550px;
-        height: 500px;
+        height: 419px;
     }
     
 }
 .questions>h1{
     margin: 20px 5px;
-    margin-top: 25px;
 }
 .questions>h1>span{
     font-size: 25px;
 }
 .options{
     width: 100%;
+    margin-bottom:20px ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 40px 0px;
 }
 .option,#end-exam{
     margin: 10px 0px;
@@ -85,20 +83,34 @@ main>h1{
     color: whitesmoke;
 }
 
-#q-6{
-    height: 480px;
-    text-align: center;
+#q-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* テキストを中央揃えにする */
+    display: none;
 }
-#q-6 > div{
-    margin: 100px 0px;
+
+#q-6 > div {
+    margin: 0; /* マージンをリセット */
+    width: 100%; /* 必要に応じて幅を設定 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#q-6>div>h1{
-    font-size: 25px;
+
+#q-6 > div > h1 {
+    font-size: 26px;
+    margin-top: 40px;
 }
-#q-6>div>p{
-    margin: 30px;
+
+#q-6 > div > p {
+    margin: 20px;
 }
 #end-exam{
+    width: 250px;
     margin: 30px auto;
     background-color: white;
 }
@@ -119,9 +131,8 @@ main>h1{
 
 
 
+
 .scroll{
-    position: fixed;
-    bottom: 5%;
     height: 15px;
     width: 95%;
     border-radius: 10px;
