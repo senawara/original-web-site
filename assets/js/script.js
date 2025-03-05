@@ -41,7 +41,7 @@ let count=0;
 window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
     let offset = $("#features").offset().top;
-    if (scrollY >= offset && count==0 && scrollY<=1100) {
+    if (scrollY >= offset && count==0 && scrollY<=1300) {
         console.log(scrollY);
         window.scrollTo(0,offset);
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
