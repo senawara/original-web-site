@@ -34,6 +34,7 @@ document.body.insertAdjacentHTML('beforeend', loadingHTML);
 
 // ページの読み込みが完了したらローディング画面を非表示にする
 window.addEventListener('load', () => {
+    console.log("ページの読み込み")
     const loadingElement = document.getElementById('loading');
     if (loadingElement) {
         loadingElement.style.display = 'none';
