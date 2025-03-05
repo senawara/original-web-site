@@ -47,7 +47,7 @@ $("#end-exam").on("click",function(){
 
 function justPreview(){
     if(nickname){
-        window.location.href=`../original-web-site/member.html?nickname=${encodeURIComponent(nickname)}&score=${score}`;
+        window.location.href=`/original-web-site/member.html?nickname=${encodeURIComponent(nickname)}&score=${score}`;
     }else{
         $(".alert").show();
     }
@@ -70,7 +70,7 @@ async function sendData() {
         });
         console.log("データを送信しました！");
         inputElement.value = "";
-        window.location.href=`../original-web-site/member.html?nickname=${encodeURIComponent(nickname)}&score=${encodeURIComponent(score)}`;
+        window.location.href=`/original-web-site/member.html?nickname=${encodeURIComponent(nickname)}&score=${encodeURIComponent(score)}`;
     } catch (error) {
         console.error("データ送信エラー:", error);
     }
