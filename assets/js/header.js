@@ -8,7 +8,7 @@ ham.addEventListener('click', function () {
 });
 
 $('.nav-items__item').on("click",function(){
-    if(window.innerHeight<=800){
+    if(window.innerHeight>=800){
     ham.classList.toggle('active');
     nav.classList.toggle('active');
     }

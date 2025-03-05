@@ -13,16 +13,17 @@
     <header class="header">
         <div class="header__inner">
             <a href="index.html" id="header-title">
-                <img src="./assets/img/icon.png" alt="">
-                <img src="./assets/img/name1.png" alt="">
+                <img id="neriCon" src="./assets/img/icon.png" alt="">
+                <img id="neriTitle" src="./assets/img/name1.png" alt="">
             </a>
         <nav class="header__nav nav" id="js-nav">
             <ul class="nav__items nav-items">
-                <li class="nav-items__item"><a href="index.html">Main</a></li>
-                <li class="nav-items__item"><a href="#features">Features</a></li>
-                <li class="nav-items__item"><a href="#anime">Anime</a></li>
-                <li class="nav-items__item"><a href="#event">Event</a></li>
-                <li class="nav-items__item"><a href="#goods">Goods</a></li>
+                <li class="nav-items__item"><a href="exam.html">Exams<span>試験</span></a></li>
+                <li class="nav-items__item"><a href="./member.html">Member<span>会員</span></a></li>
+                <li class="nav-items__item"><a href="./index.html#features">Features<span>特徴</span></a></li>
+                <li class="nav-items__item"><a href="./index.html#anime">Anime<span>アニメ</span></a></li>
+                <li class="nav-items__item"><a href="./index.html#event">Event<span>活動</span></a></li>
+                <li class="nav-items__item"><a href="./index.html#goods">Goods<span>商品</span></a></li>
             </ul>
         </nav>
   
@@ -45,21 +46,24 @@
             <h2 id="holder_name"></h2>
             <h1 id="holder_score2"></h1>
             <p>合格おめでとうございます</p>
+            <p>5問中<span id="yourScore"></span>問正解です</p>
             <p>あなたはこれ以上ないほどねり丸を<br>
                 愛でていることをここに認めます。
             </p>
         </section>
 
-        <section>
-            <h1>合格おめでとうございます</h1>
+        <section id="members">
+            <h1>\一級合格おめでとうございます/</h1>
+            <ul id="dataList"></ul>
         </section>
     </main>
     
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module" src="firebase-config.js"></script>
     <script src="https://kit.fontawesome.com/0836310334.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/member.js"></script>
     <script src="./assets/js/header.js"></script>
+    <script type="module" src="./assets/js/member.js"></script>
 </body>
 </html>

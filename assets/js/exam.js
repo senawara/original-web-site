@@ -1,23 +1,19 @@
+import { db } from "../../firebase-config.js";
+import { collection, addDoc, getDocs, serverTimestamp, orderBy, query } 
+from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
 // exam.htmlとのみ接続
-
-$(window).on('load',function(){
-    $("#q-1").show();
-    $('.certification').show();
-    console.log(nickname);
-    console.log(score);
-});
-
 let pages =1;
 let score =0;
-let nickname="sena"
+let nickname="";
 let progress= 0;
-
-// カードが次々出てくる
+$(function(){
+    $("#q-1").show();
+})
+// ボタン選択と点数換算
 $("#ans-1-3,#ans-2-3,#ans-3-1,#ans-4-2,#ans-5-3").on("click",function(){
     score +=1;
 })
-
-
 $(".option").on('click',function(){
     pages +=1;
     setTimeout(function(){cardChange(pages)},100);
@@ -40,12 +36,42 @@ function cardChange(num){
     )
 }
 
-$('#end-exam').on("click",function(){
-    nickname= $("#nickname").val();
-    if(nickname===""){
-        $(".alert").show();
+$("#end-exam").on("click",function(){
+    nickname=$("#nickname").val();
+    if(score===5){
+        sendData();
     }else{
-        window.location.href=`../../member.html?nickname=${encodeURIComponent(nickname)}&score=${score}`;
+        justPreview();
     }
 })
 
+function justPreview(){
+    if(nickname){
+        window.location.href=`../../member.html?nickname=${encodeURIComponent(nickname)}&score=${score}`;
+    }else{
+        $(".alert").show();
+    }
+}
+
+
+// データを送信
+async function sendData() {
+    const inputElement = document.getElementById("nickname");
+    const inputValue = inputElement.value.trim();
+    if (inputValue === "") {
+        console.log("メッセージを入力してください！");
+        $(".alert").show();
+        return;
+    }
+    try {
+        await addDoc(collection(db, "messages"), {
+            text: inputValue,
+            timestamp: serverTimestamp() // 時間を追加
+        });
+        console.log("データを送信しました！");
+        inputElement.value = "";
+        window.location.href=`../../member.html?nickname=${encodeURIComponent(nickname)}&score=${score}`;
+    } catch (error) {
+        console.error("データ送信エラー:", error);
+    }
+}

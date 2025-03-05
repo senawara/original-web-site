@@ -26,6 +26,9 @@
         padding: 0px;
         background-color: rgba(0,0,0,0);
     }
+    .btn-div{
+        width: 450px;
+    }
     .hamburger{
         display: none;
     }

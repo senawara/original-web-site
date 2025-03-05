@@ -12,7 +12,7 @@ body{
 }
   /* ヘッダー */
 .header {
-    box-shadow: 0px 10px 10px #d4d4d4;
+    box-shadow: 0px 5px 5px #d4d4d4;
     background-color: white;
     width: 100%;
     position: fixed;
@@ -26,7 +26,7 @@ body{
     align-items: center;
 }
 .header__inner {
-    padding: 10px ;
+    padding: 10px 10px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,13 +37,17 @@ body{
 .header__title {
     width: 80px;
 }
+#neriTitle{
+    height: 60px;
+
+}
 
 
 
 .header__title img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 60px;
 }
 
 .header__nav {
@@ -139,7 +143,6 @@ transform: rotate(45deg);
 
 .hamburger.active span:nth-child(2) {
 opacity: 0;
-
 }
 
 .hamburger.active span:nth-child(3) {
@@ -158,7 +161,7 @@ body{
     font-size: 18px;
     color: #504E40;
     position: relative;
-    top: 100px;
+    top: 83px;
 }
 
 #title{
@@ -207,7 +210,7 @@ section{
 }
 .btn-div{
     background-color: whitesmoke;
-    width: 350px;
+    width:85vw;
     height: 74px;
     border-radius: 20px;
     border: 1.5px solid #504E40;
@@ -221,7 +224,7 @@ section{
     color: whitesmoke;
     background-color: #8CB24C;
     border: none;
-    width: 350px;
+    width:100%;
     height: 74px;
     border-radius: 20px;
 }
@@ -294,14 +297,14 @@ section{
 }
 
 #features{
-    padding: 100px 0px;
+    padding: 70px 0px;
 }
 .features-liner{
     box-shadow: 10px 10px 4px #b9b9b9;
     border-radius: 30px;
-    margin-bottom: 30px;
-    padding:40px 0px;
-    width: 400px;
+    padding-bottom:40px;
+    margin: 0px auto 1rem auto;
+    width: 90%;
     height: 450px;
     overflow: hidden;
     display: flex;
@@ -313,20 +316,20 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
+    width: 88%;
     margin: 20px 0px;
 }
 .feature2{
     width: 60%;
 }
 .feature2 p{
-    margin: 20px 10px;
+    margin: 10px 10px;
     font-size: 18px;
     display: none;
 }
 .featureImg1{
     height: 400px;
-    margin-top: 30px 0px;
+    margin-top: 30px;
 }
 .featureImg2{
     height: 400px;
@@ -340,10 +343,6 @@ section{
 }
 .right-side>span>span{
     color: #c42331;
-}
-.features-liner{
-    margin: 20px auto;
-    width: 380px;
 }
 
 .voting{
@@ -485,6 +484,8 @@ section{
 }
 .sub-goods > img{
     border-radius: 20px;
+    height: auto;
+    width: auto;
 }
 .sub-goods>div:hover{
     background-color: rgba(160, 160, 160, 0.3);
