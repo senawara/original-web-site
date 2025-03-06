@@ -36,10 +36,10 @@ let count=0;
 window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
     let offset = $("#features").offset().top;
-    if (scrollY >= offset && count==0 && scrollY<=1300) {
+    console.log(scrollY)
+    if (scrollY >= offset && count==0 && scrollY<=1500) {
+        document.body.style.overflow = 'hidden'; // スクロールを無効にする
         window.scrollTo(0,offset);
-        document.documentElement.style.overflow = "hidden";
-        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         count+=1;
         featureAnime();
         setTimeout(function(){
@@ -51,23 +51,23 @@ window.addEventListener("scroll", () => {
         setTimeout(function(){
             $(".feature2 span").css({
                 "font-size":"26px",
-                "transition": "font-size 2s ease"
+                "transition": "font-size 1.6s ease"
             });
         },2800)
         setTimeout(function(){
-            document.documentElement.style.overflow = "visible";
-        },3000);
+            document.body.style.overflow = "visible"; // スクロールを有効にする
+        },2800);
     }
 });
 
 function featureAnime(){
     $(".featureImg1").css({
         "height": `160px`,
-        "transition": "height 2s ease"
+        "transition": "height 1.6s ease"
     });
     $(".featureImg2").css({
         "height": `180px`,
-        "transition": "height 2s ease"
+        "transition": "height 1.6s ease"
     });
 }
 

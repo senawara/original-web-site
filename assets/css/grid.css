@@ -20,10 +20,15 @@
         width: 560px;
         margin: 20px auto;
     }
+    #popup{
+        width: 400px;
+    }
+    #popup button{
+        width: 300px;
+    }
     #title{
         top: 0px;
     }
-    
     .header{
         position: fixed;
         top: 10%;

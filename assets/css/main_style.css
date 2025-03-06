@@ -7,14 +7,9 @@
     margin:0;
     padding: 0px;
 }
-
-html{
+body{
+    width: 100vw;
     overflow-x: hidden;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-    display: none; /* Webkitベースのブラウザ（Chrome, Safariなど）でスクロールバーを非表示にする */
 }
   /* ヘッダー */
 .header {
