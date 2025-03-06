@@ -49,9 +49,9 @@ $("#end-exam").on("click",function(){
     }
 })
 
-
+const nicknameLength = nickname.length //nicknameの文字数
 function justPreview(){
-    if(nickname!=""){
+    if(nickname!="" && nicknameLength<=20){
         // リダイレクト
         window.location.href = `member.html?nickname=${encodeURIComponent(nickname)}&score=${encodeURIComponent(score)}`;
     }else{
@@ -64,7 +64,7 @@ function justPreview(){
 async function sendData() {
     const inputElement = document.getElementById("nickname");
     const inputValue = inputElement.value.trim();
-    if (inputValue === "") {
+    if (inputValue === "" && nicknameLength<=20) {
         console.log("メッセージを入力してください！");
         $(".alert").show();
         return;
