@@ -6,7 +6,7 @@ const loadingHTML = `
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-image: url('./assets/img/bgi2.jpg');
+        background-color:white;
         background-size: cover;
         background-position: center;
         display: flex;
