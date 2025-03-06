@@ -21,6 +21,7 @@ const loadingHTML = `
             animation: spin 2s linear infinite;
         ">
             <img src="./assets/img/nerimaru1.png" style="
+                opacity:0.8;
                 width: 100px;
                 height: 100px;
                 position: absolute;

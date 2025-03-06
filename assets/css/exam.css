@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 main{
     overflow: hidden;
     height: 85vh;
@@ -8,11 +12,6 @@ main{
     box-sizing: border-box;
 }
 
-#examination{
-    margin: 0;
-    padding: 0;
-
-}
 main>h1{
     font-size: 30px;
 }
@@ -32,8 +31,7 @@ main>h1{
     /* 問題のスライドショー */
     display:none;
     width: 75%;
-    padding: 10px;
-    margin-top:10px ;
+    padding: 0px 10px;
     border: 3px solid #8CB24C;
     border-radius: 40px;
     
@@ -64,9 +62,9 @@ main>h1{
     margin: 10px 0px;
     font-family: 'MyCustomFont';
     width: 90%;
-    height: 55px;
-    font-size: 23px;
-    border-radius: 25px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 22px;
     color:#504E40;
     border: 1px solid #504E40;
     display: flex;
